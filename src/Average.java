@@ -9,11 +9,6 @@ import java.util.Scanner;
  * @author yasmi
  */
 public class Average {
-
-   
-  
-    //Create an object scanner
-   
     
       private int data[];
     private double mean; 
@@ -21,12 +16,12 @@ public class Average {
      public Average () {
       
   data = new int[5];
-       //for loop data
+        //Create an object scanner
         Scanner input = new Scanner(System.in);
+        //for loop data
        for (int i = 0; i < data.length; i ++){
          System.out.println("Please enter score number " + (i + 1) + " :");
          data[i]=  input.nextInt();
-         
            
        }
        
@@ -54,9 +49,7 @@ public class Average {
 }
        return result;
        } 
-       
-   
-    
+     
    public void  selectionSort(){
       //invoking sort() method of the Arrays class  
      Arrays.sort(data);

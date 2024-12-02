@@ -17,9 +17,5 @@ public class AverageDriver {
        
        System.out.println(rst);
 
-   }
-
-   
-
-  
+   }  
 }
