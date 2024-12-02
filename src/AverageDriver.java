@@ -9,12 +9,14 @@ import java.util.Arrays;
 /**
  *
  * @author yasmi
- */
+ */ 
 public class AverageDriver {
-   Average rst = new Average(Average );
+   
    public static void main(String[] args){
-       System.out.println(Average.toString());
-       System.out.println(Average.calculateMean());
+       Average rst = new Average();
+       
+       System.out.println(rst);
+
    }
 
    

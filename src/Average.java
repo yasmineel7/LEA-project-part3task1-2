@@ -18,42 +18,51 @@ public class Average {
       private int data[];
     private double mean; 
     
-     Average (Average s) {
-       this.mean = s.mean; 
-       this.data = s.data;
-  
+     public Average () {
+      
+  data = new int[5];
        //for loop data
         Scanner input = new Scanner(System.in);
-       for (int i = 0; i <= data.length; i ++){
-         System.out.println("Please enter a score number: ");
-         input.nextLine();
-            
+       for (int i = 0; i < data.length; i ++){
+         System.out.println("Please enter score number " + (i + 1) + " :");
+         data[i]=  input.nextInt();
+         
            
        }
+       
+         System.out.println("The mean is : " + calculateMean());
+         System.out.printf("The numbers in descending order are : ");
+         selectionSort();
+       
    }
     public double calculateMean(){
-       for (int j = 0; j<= data.length; j ++){
-       this.mean += (double)(this.data/data.length);
+        double totalscore = 0;
+       for (int j = 0; j < data.length; j ++){
+       totalscore += data[j];
        
        }
-       return this.mean;
+       mean = (double)(totalscore/data.length);
+      return mean; 
     }
-   public String toString(int[] data){
-       return Arrays.toString(selectionSort(this.data));
-   }
-    
-   public int[] selectionSort(int[] data){
-       return this.data;
+      @Override
+   public String toString(){
+       String result = " ";
+       for (int i = 0; i < data.length; i ++)
+       {
+           result += data[i]+ " ";
+
+}
+       return result;
+       } 
        
+   
+    
+   public void  selectionSort(){
+      //invoking sort() method of the Arrays class  
+     Arrays.sort(data);
+
+     }
    }
+   
 
 
-public static void main(String[] args){
-    int data1 = 1;
-
-    System.out.println("str" + Average());
-    System.out.println("str" + toString());
-}
-
-
-}
