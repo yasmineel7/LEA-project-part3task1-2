@@ -22,7 +22,7 @@ public class Average {
         //for loop data
        for (int i = 0; i < data.length; i ++){
          System.out.println("Please enter score number " + (i + 1) + " :");
-         data[i]=  input.nextInt();
+         data[i]=  input.nextInt(); 
            
        }
        
@@ -31,6 +31,7 @@ public class Average {
          selectionSort();
        
    }
+     //the calculateMean() method
     public double calculateMean(){
         double totalscore = 0;
        for (int j = 0; j < data.length; j ++){
@@ -50,6 +51,7 @@ public class Average {
        return result;
        } 
      
+   //the selectionSort() method
    public void  selectionSort(){
       //invoking sort() method of the Arrays class  
      Arrays.sort(data);
